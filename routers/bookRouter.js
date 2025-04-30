@@ -49,7 +49,7 @@ bookRouter.put('/books/:id', async (req, res) => {
 })
 bookRouter.delete('/books/:id', async (req, res) => {
     try {
-        await bookModel.deleteOne({_id: req.params.id}, req.body )
+        await bookModel.deleteOne({ _id: req.params.id})
         res.json({message: "Livre bien supprimé"})
     } catch (error) {
         res.json(error.message)
